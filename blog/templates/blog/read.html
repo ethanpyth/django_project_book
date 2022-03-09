@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture</title>
+</head>
+<body>
+    <h1>
+        {{ article.title }} 
+        <span class="small">
+            dans {{ article.category.name }}
+        </span>
+    </h1>
+    <p class="infos">
+        Rédigé par {{ article.author }}, le {{ article.date|date:"DATE_FORMAT" }}
+    </p>
+    <div class="contenu">
+        {{ article.content|linebreaks }}
+    </div>
+</body>
+</html>
